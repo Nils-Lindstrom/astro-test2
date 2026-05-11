@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: YOUR_USERNAME/YOUR_REPO
+  repo: Nils-Lindstrom/astro-test2
+  branch: main
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
