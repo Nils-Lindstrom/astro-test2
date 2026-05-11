@@ -1,11 +1,131 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const upcomingEvents = [
+  {
+    title: 'Board Game Night',
+    date: '2026-09-12',
+    location: 'Student Union Building',
+  },
+  {
+    title: 'OP Kickoff',
+    date: '2026-08-20',
+    location: 'Campus Main Hall',
+  },
+  {
+    title: 'International Fika',
+    date: '2026-10-01',
+    location: 'Cafeteria',
+  },
+];
+
+const sponsors = [
+  'Company One',
+  'Company Two',
+  'Company Three',
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Organization</title>
+  </head>
+
+  <body>
+    <header>
+      <h2>Student Organization</h2>
+
+      <nav>
+        <a href="/events">Events</a>
+        <a href="/members">Members</a>
+        <a href="/documents">Documents</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Welcome to Our Student Organization</h1>
+
+        <p>
+          We organize events, introduction weeks, and social activities for
+          students at the university — both Swedish and international.
+        </p>
+
+        <a class="button" href="/members">
+          Become a Member
+        </a>
+      </section>
+
+      <section>
+        <h2>Upcoming Events</h2>
+
+        <div class="grid">
+          {
+            upcomingEvents.map((event) => (
+              <div class="card">
+                <h3>{event.title}</h3>
+                <p><strong>Date:</strong> {event.date}</p>
+                <p><strong>Location:</strong> {event.location}</p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section>
+        <h2>Quick Links</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>OP Information</h3>
+            <p>
+              Information for new students, schedules, and organizers.
+            </p>
+            <a href="/op">Read More →</a>
+          </div>
+
+          <div class="card">
+            <h3>Public Documents</h3>
+            <p>
+              Board meetings, procedures, reports, and archive documents.
+            </p>
+            <a href="/documents">View Documents →</a>
+          </div>
+
+          <div class="card">
+            <h3>Board Members</h3>
+            <p>
+              Meet the current board and find contact information.
+            </p>
+            <a href="/about">Meet the Board →</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Our Sponsors</h2>
+
+        <div class="sponsor-list">
+          {
+            sponsors.map((sponsor) => (
+              <div class="sponsor">{sponsor}</div>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Contact us: contact@example.com
+      </p>
+
+      <p>
+        © 2026 Student Organization
+      </p>
+    </footer>
+  </body>
+</html>

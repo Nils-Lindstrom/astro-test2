@@ -1,0 +1,110 @@
+
+    :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f8fafc;
+    --muted: #cbd5e1;
+    --accent: #38bdf8;
+    }
+
+    * {
+    box-sizing: border-box;
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    }
+
+    a {
+    color: var(--accent);
+    text-decoration: none;
+    }
+
+    header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav {
+    display: flex;
+    gap: 1rem;
+    }
+
+    .hero {
+    padding: 6rem 2rem;
+    text-align: center;
+    }
+
+    .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    }
+
+    .hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    }
+
+    .button {
+    display: inline-block;
+    margin-top: 2rem;
+    background: var(--accent);
+    color: black;
+    padding: 0.8rem 1.4rem;
+    border-radius: 10px;
+    font-weight: bold;
+    }
+
+    section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+    h2 {
+    margin-bottom: 2rem;
+    }
+
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    }
+
+    .card {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: 14px;
+    }
+
+    .card h3 {
+    margin-top: 0;
+    }
+
+    footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: var(--muted);
+    }
+
+    .sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    }
+
+    .sponsor {
+    background: var(--card);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    }
